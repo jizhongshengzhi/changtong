@@ -4,6 +4,7 @@
 # 目录说明
 * `document`本项目文档,包括策划书，原型等
 * `wechat`微信小程序
+* `demo`小程序的组件库，来自 https://github.com/weilanwl/ColorUI
 
 # git操作指南
 * `git clone https://github.com/jizhongshengzhi/changtong.git`克隆项目文件（首次执行）
