@@ -2,42 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="324a4473-19b4-447d-9f63-da8abfb353cc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/changtong.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wechat/pages/home/index/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wechat/pages/home/index/index.wxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wechat/pages/personal/index/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wechat/pages/personal/index/index.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wechat/pages/personal/index/index.wxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wechat/pages/personal/index/index.wxss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wechat/static/icons/about.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wechat/static/icons/about_cur.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wechat/static/icons/basics.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wechat/static/icons/basics_cur.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wechat/static/icons/component.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wechat/static/icons/component_cur.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wechat/static/icons/plugin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wechat/static/icons/plugin_cur.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/colorui/components/cu-custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/demo/colorui/components/cu-custom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/colorui/components/cu-custom.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/demo/colorui/components/cu-custom.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/pages/about/home/home.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/pages/about/home/home.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/pages/index/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/pages/index/index.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/pages/index/index.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/demo/pages/index/index.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/pages/plugin/drawer/drawer.js" beforeDir="false" afterPath="$PROJECT_DIR$/demo/pages/plugin/drawer/drawer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/wechat/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/wechat/app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat/colorui/components/cu-custom.js" beforeDir="false" afterPath="$PROJECT_DIR$/wechat/colorui/components/cu-custom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat/colorui/components/cu-custom.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/wechat/colorui/components/cu-custom.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat/pages/index/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat/pages/index/index.json" beforeDir="false" afterPath="$PROJECT_DIR$/wechat/pages/home/index/index.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat/pages/index/index.wxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wechat/pages/index/index.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/wechat/pages/home/index/index.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
+    <ignored path=".idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,8 +19,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/demo/pages/index/index.wxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="870">
-              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+            <state relative-caret-position="841">
+              <caret line="29" column="7" lean-forward="true" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -87,12 +57,19 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wechat/app.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="182">
+              <caret line="19" column="34" lean-forward="true" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitinoore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-905" />
           </provider>
         </entry>
       </file>
@@ -156,65 +133,6 @@
               <item name="changtong" type="b2602c69:ProjectViewProjectNode" />
               <item name="changtong" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="changtong" type="b2602c69:ProjectViewProjectNode" />
-              <item name="changtong" type="462c0819:PsiDirectoryNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="changtong" type="b2602c69:ProjectViewProjectNode" />
-              <item name="changtong" type="462c0819:PsiDirectoryNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="changtong" type="b2602c69:ProjectViewProjectNode" />
-              <item name="changtong" type="462c0819:PsiDirectoryNode" />
-              <item name="demo" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="basics" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="changtong" type="b2602c69:ProjectViewProjectNode" />
-              <item name="changtong" type="462c0819:PsiDirectoryNode" />
-              <item name="wechat" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="changtong" type="b2602c69:ProjectViewProjectNode" />
-              <item name="changtong" type="462c0819:PsiDirectoryNode" />
-              <item name="wechat" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="changtong" type="b2602c69:ProjectViewProjectNode" />
-              <item name="changtong" type="462c0819:PsiDirectoryNode" />
-              <item name="wechat" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="home" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="changtong" type="b2602c69:ProjectViewProjectNode" />
-              <item name="changtong" type="462c0819:PsiDirectoryNode" />
-              <item name="wechat" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="home" type="462c0819:PsiDirectoryNode" />
-              <item name="index" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="changtong" type="b2602c69:ProjectViewProjectNode" />
-              <item name="changtong" type="462c0819:PsiDirectoryNode" />
-              <item name="wechat" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="personal" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="changtong" type="b2602c69:ProjectViewProjectNode" />
-              <item name="changtong" type="462c0819:PsiDirectoryNode" />
-              <item name="wechat" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="personal" type="462c0819:PsiDirectoryNode" />
-              <item name="index" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -225,10 +143,10 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/wechat/colorui" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.idea" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Ignored.Files" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -268,18 +186,17 @@
       <workItem from="1554003965027" duration="1757000" />
       <workItem from="1554256913564" duration="24000" />
       <workItem from="1554286822854" duration="46000" />
-      <workItem from="1555741835163" duration="10471000" />
+      <workItem from="1555741835163" duration="11478000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12298000" />
+    <option name="totallyTimeSpent" value="13305000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1974" y="25" width="1866" height="1055" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25692558" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25692558" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -291,7 +208,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32969433" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.34170306" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.34170306" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -302,9 +219,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/wechat/static/icons/about_cur.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/wechat/colorui/icon.wxss">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -543,8 +457,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/demo/pages/index/index.wxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
-          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+        <state relative-caret-position="841">
+          <caret line="29" column="7" lean-forward="true" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -574,9 +488,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wechat/app.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="182">
+          <caret line="19" column="34" lean-forward="true" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitinoore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-905" />
       </provider>
     </entry>
   </component>
