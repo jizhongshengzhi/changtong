@@ -11,7 +11,7 @@ App({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
       }
-    })
+    });
     // 获取用户信息
     wx.getSetting({
       success: res => {
@@ -31,7 +31,7 @@ App({
           })
         }
       }
-    })
+    });
     // 获取系统状态栏信息
     wx.getSystemInfo({
       success: e => {
@@ -45,4 +45,4 @@ App({
   globalData: {
     userInfo: null
   }
-})
+});
