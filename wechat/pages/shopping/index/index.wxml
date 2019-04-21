@@ -1,0 +1,5 @@
+<!--pages/shopping/index/index.wxml-->
+<scroll-view scroll-y class="scrollPage">
+    <custom-top-bar bgColor="bg-gradual-blue"><view slot="content">商城</view></custom-top-bar>
+    <text>这是商城</text>
+</scroll-view>
