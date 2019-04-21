@@ -1,0 +1,5 @@
+<!--pages/music/index/index.wxml-->
+<scroll-view scroll-y class="scrollPage">
+    <custom-top-bar bgColor="bg-gradual-blue"><view slot="content">音乐治疗</view></custom-top-bar>
+    <text>这是音乐治疗</text>
+</scroll-view>
