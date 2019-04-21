@@ -8,6 +8,7 @@
         "navigationBarBackgroundColor": "#fff",
         "navigationBarTitleText": "畅通",
         "navigationBarTextStyle": "black",
+        "navigationStyle": "custom",
         "enablePullDownRefresh": true
     },
     "tabBar": {
@@ -31,7 +32,7 @@
         ]
     },
     "usingComponents": {
-        "title-bar": "/colorui/components/cu-custom"
+        "cu-custom": "/colorui/components/cu-custom"
     },
     "sitemapLocation": "sitemap.json"
 }

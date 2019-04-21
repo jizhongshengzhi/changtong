@@ -1,4 +1,5 @@
 <!--pages/home/home.wxml-->
 <scroll-view scroll-y class="scrollPage">
+    <cu-custom bgColor="bg-gradual-blue"><view slot="backText">返回</view><view slot="content">首页</view></cu-custom>
     <text>这是首页</text>
 </scroll-view>
