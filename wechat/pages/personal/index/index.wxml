@@ -1,7 +1,19 @@
 <scroll-view scroll-y class="scrollPage">
-    <view class="UCenter-bg">
-
-        <image src="https://image.weilanwl.com/gif/wave.gif" mode="scaleToFill" class="gif-wave"></image>
+    <custom-top-bar bgColor="bg-gradual-blue"><view slot="content">我的</view></custom-top-bar>
+    <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+        <view class="cu-item arrow">
+            <view class="cu-avatar xl margin-left"
+                  style="background-image:url({{userInfo.avatarUrl}});">
+                <view class="cu-tag badge {{userInfo.gender==0?'icon-female bg-pink':'icon-male bg-blue'}}"></view>
+            </view>
+            <view class="text-sm padding">
+                <text class="text-df">{{userInfo.nickName}}</text>
+                <text class="text-grey">{{email}}</text>
+            </view>
+            <navigator url="/pages/home/index/index" hover-class="none">
+                <text class="icon-edit text-gray"></text>
+            </navigator>
+        </view>
     </view>
     <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
         <view class="cu-item arrow">

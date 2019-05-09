@@ -1,0 +1,25 @@
+<!--pages/login/login.wxml-->
+<title-bar title="欢迎使用畅通"></title-bar>
+
+<view class="bg-img bg-mask padding-tb-xl"
+      style="background-image: url('http://upload.idcquan.com/2018/0801/1533104908277.jpg');height: 414rpx;">
+    <view class="padding-xl text-white">
+        <view class="padding-xs text-xl">
+            畅通
+        </view>
+        <view class="padding-xs">
+            依托于智能马桶的人体健康助手.
+        </view>
+    </view>
+</view>
+
+<view class="cu-form-group margin-top">
+    <view class="title">邮箱</view>
+    <input placeholder="请输入邮箱地址"></input>
+</view>
+
+<view class="padding">
+    <button class="cu-btn block bg-blue shadow margin-tb-sm lg" open-type='getUserInfo' bindgetuserinfo='login'>
+        登录
+    </button>
+</view>
