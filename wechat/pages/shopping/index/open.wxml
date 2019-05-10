@@ -1,2 +1,7 @@
-<!--pages/shopping/index/open.wxml-->
-<text>pages/shopping/index/open.wxml</text>
+<!--pages/shopping/index/index.wxml-->
+<custom-top-bar bgColor="bg-gradual-blue" isBack="{{true}}"><view slot="backText">返回</view><view slot="content">按钮 / 设计</view></custom-top-bar>
+<view class='wrapper'>
+
+    <button class='wepay' bindtap='goBaidu'>点击跳转</button>
+
+  </view>

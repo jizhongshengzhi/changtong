@@ -1,6 +1,6 @@
 {
-
   "pages": [
+    "pages/login/login",
     "pages/home/index/index",
     "pages/music/index/index",
     "pages/shopping/index/index",
@@ -58,6 +58,5 @@
     "custom-top-bar": "/colorui/components/custom-top-bar/custom-top-bar"
   },
   "sitemapLocation": "sitemap.json"
+  
 }
-
-   
