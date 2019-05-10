@@ -1,6 +1,11 @@
 <!--pages/home/home.wxml-->
 <scroll-view scroll-y class="scrollPage">
     <custom-top-bar bgColor="bg-gradual-blue"><view slot="content">首页</view></custom-top-bar>
-    <text>这是首页</text>
+    <swiper class="screen-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
+  <swiper-item wx:for="{{swiperList}}" wx:key>
+    <image src="{{item.url}}" mode="aspectFill" wx:if="{{item.type=='image'}}"></image>
+    <video src="{{item.url}}" autoplay loop muted show-play-btn="{{false}}" controls="{{false}}" objectFit="cover" wx:if="{{item.type=='video'}}"></video>
+  </swiper-item>
+</swiper>
 </scroll-view>
 
