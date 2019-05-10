@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "pages": [
     "pages/home/index/index",
     "pages/music/index/index",
@@ -58,3 +59,64 @@
   },
   "sitemapLocation": "sitemap.json"
 }
+=======
+    "pages": [
+        "pages/login/login",
+        "pages/home/index/index",
+        "pages/music/index/index",
+        "pages/shopping/index/index",
+        "pages/community/index/index",
+        "pages/personal/index/index"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "畅通",
+        "navigationBarTextStyle": "black",
+        "navigationStyle": "custom",
+        "enablePullDownRefresh": true
+    },
+    "tabBar": {
+        "color": "#aaaaaa",
+        "selectedColor": "#39b54a",
+        "backgroundColor": "#ffffff",
+        "borderStyle": "black",
+        "list": [
+            {
+                "pagePath": "pages/home/index/index",
+                "text": "首页",
+                "iconPath": "static/icons/basics.png",
+                "selectedIconPath": "static/icons/basics_cur.png"
+            },
+            {
+                "pagePath": "pages/music/index/index",
+                "text": "音乐治疗",
+                "iconPath": "static/icons/component.png",
+                "selectedIconPath": "static/icons/component_cur.png"
+            },
+            {
+                "pagePath": "pages/shopping/index/index",
+                "text": "商城",
+                "iconPath": "static/icons/component.png",
+                "selectedIconPath": "static/icons/component_cur.png"
+            },
+            {
+                "pagePath": "pages/community/index/index",
+                "text": "社区",
+                "iconPath": "static/icons/component.png",
+                "selectedIconPath": "static/icons/component_cur.png"
+            },
+            {
+                "pagePath": "pages/personal/index/index",
+                "text": "个人中心",
+                "iconPath": "static/icons/about.png",
+                "selectedIconPath": "static/icons/about_cur.png"
+            }
+        ]
+    },
+    "usingComponents": {
+        "custom-top-bar": "/colorui/components/custom-top-bar/custom-top-bar"
+    },
+    "sitemapLocation": "sitemap.json"
+}
+>>>>>>> master

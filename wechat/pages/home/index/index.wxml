@@ -3,3 +3,4 @@
     <custom-top-bar bgColor="bg-gradual-blue"><view slot="content">首页</view></custom-top-bar>
     <text>这是首页</text>
 </scroll-view>
+
