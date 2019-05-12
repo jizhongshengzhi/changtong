@@ -31,6 +31,26 @@ Page({
       url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg'
     }],
   },
+  showModal(e) {
+    this.setData({
+      modalName: e.currentTarget.dataset.target
+    })
+  },
+  hideModal(e) {
+    this.setData({
+      modalName: null
+    })
+  },
+  showModal1(e) {
+    this.setData({
+      modalName: e.currentTarget.dataset.target
+    })
+  },
+  hideModal1(e) {
+    this.setData({
+      modalName: null
+    })
+  },
   onLoad() {
     this.towerSwiper('swiperList');
     // 初始化towerSwiper 传已有的数组名即可

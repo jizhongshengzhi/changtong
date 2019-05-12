@@ -10,6 +10,49 @@
     </swiper-item>
   </swiper>
 </scroll-view>
-<view class=' justify-between'>
- <button class="cu-btn round lg bg-red margin-top-lg">大尺寸</button>
+<view class='flex justify-end'>
+  <view class="action">
+    <button class="cu-btn round lg bg-red margin-top-xl" bindtap="showModal1" data-target="DialogModal2">签到</button>
+  </view>
+  <view class="cu-modal {{modalName=='DialogModal2'?'show':''}}">
+    <view class="cu-dialog">
+      <view class="cu-bar bg-white justify-end">
+        <view class="content">是否签到</view>
+        <view class="action" bindtap="hideModal1">
+          <text class="icon-close text-red"></text>
+        </view>
+      </view>
+      <view class="cu-bar bg-white justify-around">
+        <view class="action">
+        <button class="cu-btn line-green text-green radius" bindtap="hideModal1">否</button>
+        <button class="cu-btn bg-green margin-left radius" bindtap="hideModal1">是</button>
+      </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='flex justify-center'>
+  <view class="action">
+    <button class="analyse cu-btn round bg-red margin-top-xl" bindtap="showModal" data-target="DialogModal1">分析</button>
+  </view>
+  <view class="cu-modal {{modalName=='DialogModal1'?'show':''}}">
+    <view class="cu-dialog">
+      <view class="cu-bar bg-white justify-end">
+        <view class="content">分析结果</view>
+        <view class="action" bindtap="hideModal">
+          <text class="icon-close text-red"></text>
+        </view>
+      </view>
+      <view class="padding-xl">
+        多喝热水。
+      </view>
+      <view class="cu-bar bg-white justify-end">
+        <view class="action">
+          <button class="cu-btn line-green text-green" bindtap="hideModal">取消</button>
+          <button class="cu-btn bg-green margin-left" bindtap="hideModal">确定</button>
+
+        </view>
+      </view>
+    </view>
+  </view>
 </view>
