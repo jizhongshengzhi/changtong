@@ -1,6 +1,8 @@
 {
     "pages": [
         "pages/login/login",
+        "pages/music/index/bendi",
+        "pages/music/index/gedan",
         "pages/home/index/index",
         "pages/music/index/index",
         "pages/shopping/index/index",

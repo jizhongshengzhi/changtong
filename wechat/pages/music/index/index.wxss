@@ -1,1 +1,13 @@
 /* pages/music/index/index.wxss */
+.box {  
+  margin: 20rpx 0; 
+}
+
+.box view.cu-bar {
+  margin-top: 20rpx; 
+}
+
+.size{
+  height: 130px;
+  width: 156px;
+}
