@@ -5,7 +5,8 @@
         "pages/music/index/index",
         "pages/shopping/index/index",
         "pages/community/index/index",
-        "pages/personal/index/index"
+        "pages/personal/index/index",
+        "pages/personal/edit/edit"
     ],
     "window": {
         "backgroundTextStyle": "light",
