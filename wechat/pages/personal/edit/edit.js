@@ -1,12 +1,18 @@
-//person.js
-//获取应用实例
+// pages/personal/edit/edit.js
 const app = getApp();
-
 Page({
+
+    /**
+     * 页面的初始数据
+     */
     data: {
+        backOrNot: true,
         userInfo: {},
+        tempFilePaths: '',
         canIUse: wx.canIUse('button.open-type.getUserInfo'),
-        email: 'xxx@xxx.com'
+        email: 'xxx@xxx.com',
+        autograph: '测试签名',
+        sex: 0
     },
     onLoad: function () {
         if (app.globalData.userInfo) {
@@ -43,9 +49,26 @@ Page({
             hasUserInfo: true
         })
     },
-    edit: function () {
-        wx.navigateTo({
-            url: '/pages/personal/edit/edit'
+    save: function () {
+        wx.showToast({
+            title: '修改成功',
+            icon: 'success',
         });
+        setTimeout(function () {
+            wx.navigateBack({ delta: 1 })
+        }, 500);
     },
+    chooseImage: function () {
+        wx.chooseImage({
+            count: 1, // 默认9
+            sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
+            sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
+            success: function (res) {
+                // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
+                that.setData({
+                    tempFilePaths: res.tempFilePaths
+                })
+            }
+        })
+    }
 });

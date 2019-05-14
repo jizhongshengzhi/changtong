@@ -1,0 +1,36 @@
+<!--pages/personal/edit/edit.wxml-->
+<scroll-view scroll-y class="scrollPage">
+    <custom-top-bar bgColor="bg-gradual-blue" isBack="{{backOrNot}}"></custom-top-bar>
+    <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+        <view class="cu-item arrow" bindtap="chooseImage">
+            <view class="title">头像</view>
+            <view class="cu-avatar xl margin-left"
+                  style="background-image:url({{userInfo.avatarUrl}});">
+                <view class="cu-tag badge {{userInfo.gender==0?'icon-female bg-pink':'icon-male bg-blue'}}"></view>
+            </view>
+        </view>
+        <view class="cu-form-group margin-top">
+            <view class="title">昵称</view>
+            <input value="{{userInfo.nickName}}"></input>
+        </view>
+        <view class="cu-form-group margin-top">
+            <view class="title">签名</view>
+            <input value="{{autograph}}"></input>
+        </view>
+        <view class="cu-form-group margin-top">
+            <view class="title">性别</view>
+            <switch class="switch-sex" checked="{{userInfo.gender == 0 ? false : true}}"></switch>
+        </view>
+        <view class="cu-form-group margin-top">
+            <view class="title">邮箱</view>
+            <input value="{{email}}"></input>
+        </view>
+    </view>
+
+
+    <view class="padding">
+        <button class="cu-btn block bg-blue shadow margin-tb-sm lg" bindtap="save">
+            保存
+        </button>
+    </view>
+</scroll-view>
