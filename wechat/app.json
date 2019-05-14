@@ -10,7 +10,8 @@
         "pages/personal/index/index",
         "pages/personal/edit/edit",
         "pages/community/index/detail",
-        "pages/community/index/chat"
+        "pages/community/index/chat",
+        "pages/shopping/index/open/out"
     ],
     "window": {
         "backgroundTextStyle": "light",

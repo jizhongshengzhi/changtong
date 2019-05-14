@@ -1,1 +1,6 @@
-/* pages/shopping/index/index.wxss */
+page{
+  padding-top: 100rpx;
+}
+item.none{
+  display: none;
+}

@@ -1,5 +1,87 @@
 <!--pages/shopping/index/index.wxml-->
 <scroll-view scroll-y class="scrollPage">
     <custom-top-bar bgColor="bg-gradual-blue"><view slot="content">商城</view></custom-top-bar>
-    <text>这是商城</text>
+
 </scroll-view>
+<view class="cu-bar bg-white search fixed" style="top:{{CustomBar}}px">
+  <view class="search-form round">
+    <text class="icon-search"></text>
+    <input type="text" placeholder="搜索你喜欢的东西" confirm-type="search" bindinput="searchIcon"></input>
+  </view>
+</view>
+<view class="cu-card case {{isCard?'no-card':''}}">
+  <view class="cu-item shadow">
+    <view class="image">
+      <image src="https://thumbs.dreamstime.com/b/柠檬-49204140.jpg" mode="widthFix"> 
+      
+      </image>
+      <view class="cu-tag bg-blue">柠檬
+      <navigator class="action" url="open" hover-class="none">
+    <text class="icon-skinfill">点我打开购买</text>
+  </navigator>
+      </view>
+      <view class="cu-bar bg-shadeBottom">
+        <text class="text-cut">生津止渴、开胃提神、美白养肤 </text>
+      </view>
+    </view>
+    <view class="cu-list menu-avatar">
+      <view class="cu-item">
+        <view class="">
+          <view class="text-grey">推荐用法：柠檬蜂蜜水</view>
+          <view class="text-gray text-sm flex justify-between">
+            做法：柠檬洗净切片放入广口瓶中，导入蜂蜜没住柠檬，放入冰箱，腌制24小时即可饮用
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="cu-card case {{isCard?'no-card':''}}">
+  <view class="cu-item shadow">
+    <view class="image">
+      <image src="https://gss0.baidu.com/94o3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/a686c9177f3e6709797276ac3cc79f3df8dc5576.jpg" mode="widthFix"></image>
+      <view class="cu-tag bg-blue">苹果
+       <navigator class="action" url="open" hover-class="none">
+    <text class="icon-skinfill">点我打开购买</text>
+  </navigator>
+      </view>
+      <view class="cu-bar bg-shadeBottom">
+        <text class="text-cut">补脑养血、宁神安眠</text>
+      </view>
+    </view>
+    <view class="cu-list menu-avatar">
+      <view class="cu-item">
+        <view class="">
+          <view class="text-grey">推荐用法：直接食用</view>
+          <view class="text-gray text-sm flex justify-between">
+            做法：苹果流水洗干净一天吃1-2个，每天早晚空腹
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="cu-card case {{isCard?'no-card':''}}">
+  <view class="cu-item shadow">
+    <view class="image">
+      <view class="cu-tag bg-blue">柠檬
+       <navigator class="action" url="open" hover-class="none">
+    <text class="icon-skinfill">点我打开购买</text>
+  </navigator>
+      </view>
+      <view class="cu-bar bg-shadeBottom">
+        <text class="text-cut">生津止渴、开胃提神、美白养肤 </text>
+      </view>
+    </view>
+    <view class="cu-list menu-avatar">
+      <view class="cu-item">
+        <view class="">
+          <view class="text-grey">推荐用法：柠檬蜂蜜水</view>
+          <view class="text-gray text-sm flex justify-between">
+            做法：柠檬洗净切片放入广口瓶中，导入蜂蜜没住柠檬，放入冰箱，腌制24小时即可饮用
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
