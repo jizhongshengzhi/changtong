@@ -6,7 +6,7 @@
     "pages/shopping/index/index",
     "pages/community/index/index",
     "pages/personal/index/index",
-    "pages/shopping/index/open"
+    "pages/shopping/index/open/out"
   ],
   "window": {
     "backgroundTextStyle": "light",

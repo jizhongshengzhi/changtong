@@ -1,7 +1,36 @@
 <!--pages/shopping/index/index.wxml-->
 <custom-top-bar bgColor="bg-gradual-blue" isBack="{{true}}"><view slot="backText">返回</view><view slot="content">按钮 / 设计</view></custom-top-bar>
 <view class='wrapper'>
-
-    <button class='wepay' bindtap='goBaidu'>点击跳转</button>
-
+    <button class='wepay' bindtap='out.wxml'>点击购买
+    </button>    
+</view>
+  <view class="cu-card case {{isCard?'no-card':''}}">
+  <view class="cu-item shadow">
+    <view class="image">
+      <image src="https://thumbs.dreamstime.com/b/柠檬-49204140.jpg" mode="widthFix"></image>
+      <view class="cu-tag bg-blue">柠檬</view>
+    </view>
+  </view>
+  </view>
+  <view class="cu-card case {{isCard?'no-card':''}}">
+  <view class="cu-item shadow">
+  <text class='size'>别名：柠果、黎檬、洋柠檬、益母果
+使用提示：每次100～200克
+柠檬知识介绍：
+Lemon柠檬芸香科植物黎檬或者柠檬的果实。因其味极酸，肝虚孕妇最喜食，故称益母果或益母子。柠檬中含有丰富的柠檬酸，困此被誉为“柠檬酸仓库”。它的果实汁多肉脆，有浓郁的芳香气。因为味道物酸，故只能作为上等调味料，用来调制饮料菜肴、化妆品和药品。
+柠檬补充信息：
+柠檬选购：优质柠檬个头中等，果行椭圆，两端均突起而稍尖，似橄榄球状，成熟者皮色鲜黄，具有浓郁的香气。
+柠檬适合人群：
+一般人群均可食用
+1. 暑热口干烦躁、消化不良者，维生素C缺乏者，胎动不安的孕妇，肾结石患者，高血压、心肌梗死患者适宜食用；
+2. 胃溃疡、胃酸分泌过多，患有龋齿者和糖尿病患者慎食。
+柠檬食疗作用：
+柠檬味酸甘、性平，入肝、胃经；
+有化痰止咳，生津，健脾的功效；
+主治支气管炎、百日咳、维生素C缺乏症、中暑烦渴、食欲不振、怀孕妇女胃气不和、纳减、噫气等。
+柠檬做法指导：
+1. 因太酸而不适合鲜食，可以用来配菜、榨汁；
+2. 柠檬富有香气，能解除肉类、水产的腥膻之气，并能使肉质更加细嫩。
+3. 应用于劳累过度、全身酸痛无力：果核3克，研成粉，用米酒30克送服，每晚睡前服。</text>
+  </view>
   </view>

@@ -1,4 +1,4 @@
-// pages/b/b.js
+// pages/shopping/index/open/out.js
 Page({
 
   /**

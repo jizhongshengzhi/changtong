@@ -3,6 +3,9 @@ Page({
   data: {
     ColorList: app.globalData.ColorList,
   },
+  icon: [
+    { name: 'cart', isShow: true }
+  ],
   showModal(e) {
     this.setData({
       modalName: e.currentTarget.dataset.target

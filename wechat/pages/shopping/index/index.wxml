@@ -39,7 +39,7 @@
 <view class="cu-card case {{isCard?'no-card':''}}">
   <view class="cu-item shadow">
     <view class="image">
-      <image src="https://thumbs.dreamstime.com/b/柠檬-49204140.jpg" mode="widthFix"></image>
+      <image src="https://gss0.baidu.com/94o3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/a686c9177f3e6709797276ac3cc79f3df8dc5576.jpg" mode="widthFix"></image>
       <view class="cu-tag bg-blue">苹果
        <navigator class="action" url="open" hover-class="none">
     <text class="icon-skinfill">点我打开购买</text>
@@ -64,7 +64,6 @@
 <view class="cu-card case {{isCard?'no-card':''}}">
   <view class="cu-item shadow">
     <view class="image">
-      <image src="https://thumbs.dreamstime.com/b/柠檬-49204140.jpg" mode="widthFix"></image>
       <view class="cu-tag bg-blue">柠檬
        <navigator class="action" url="open" hover-class="none">
     <text class="icon-skinfill">点我打开购买</text>
