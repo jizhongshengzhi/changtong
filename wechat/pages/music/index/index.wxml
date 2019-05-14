@@ -1,5 +1,63 @@
 <!--pages/music/index/index.wxml-->
 <scroll-view scroll-y class="scrollPage">
     <custom-top-bar bgColor="bg-gradual-blue"><view slot="content">音乐治疗</view></custom-top-bar>
-    <text>这是音乐治疗</text>
 </scroll-view>
+
+<view class="cu-bar bg-gradual-green search">
+  <view class="search-form radius">
+    <text class="icon-search"></text>
+    <input type="text" placeholder="搜索你想要听的歌曲" confirm-type="search"></input>
+  </view>
+  <view class="action">
+    <text class="icon-close"></text>
+    <text>取消</text>
+  </view>
+</view>
+
+<view class="solids-bottom padding-xs flex align-center">
+  <view class="flex-sub text-center">
+    <view class="solid-bottom text-lg padding">
+      <text class="text-black">为你推荐的歌曲</text>
+    </view>
+  </view>
+</view>
+<view class="flex">
+  <view class="flex-sub bg-olive padding-sm margin-xs radius">如约而至</view>
+  <view class="flex-sub bg-olive padding-sm margin-xs radius">啤酒泡泡</view>
+</view>
+<view class="flex">
+  <view class="flex-sub bg-olive padding-sm margin-xs radius">改变自己</view>
+  <view class="flex-sub bg-olive padding-sm margin-xs radius">阴天快乐</view>
+</view>
+<view class="flex">
+  <view class="flex-sub bg-olive padding-sm margin-xs radius">无忧房客</view>
+  <view class="flex-sub bg-olive padding-sm margin-xs radius">远走高飞</view>
+</view>
+<view class="flex">
+  <view class="flex-sub bg-olive padding-sm margin-xs radius">爱上夏天</view>
+  <view class="flex-sub bg-olive padding-sm margin-xs radius">最好的未来</view>
+</view>
+<view class='flex'>
+<view class='flex-sub'><image class='size' src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1557661650973&di=d5f7593d1d687c5f0561b39142f3d734&imgtype=0&src=http%3A%2F%2Fa.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F3b292df5e0fe9925e4046aee3fa85edf8db17107.jpg"></image>
+</view>
+<view class='flex-sub'><image class="size" src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2159285414,3828666975&fm=26&gp=0.jpg"></image>
+</view>
+</view>
+<view class="flex">
+  <view class="flex-sub bg-gradual-green padding-sm margin-xs radius text-center">
+    <navigator class="action" url="bendi" hover-class="none">
+      <text class="icon-skinfill">本地音乐</text>
+    </navigator>
+  </view>
+  <view class="flex-sub bg-gradual-green padding-sm margin-xs radius text-center">
+    <navigator class="action" url="gedan" hover-class="none">
+      <text class="icon-skinfill">歌单列表</text>
+    </navigator>
+  </view>
+</view>
+<view class="flex">
+  <view class="flex-twice bg-gradual-green padding-sm margin-xs radius text-center">正在播放的歌曲</view>
+  <view class="flex-sub padding-sm margin-lg radius text-center icon-backwardfill"></view>
+  <view class="flex-sub padding-sm margin-lg radius text-center icon-videofill"></view>
+  <view class="flex-sub padding-sm margin-lg radius text-center icon-play_forward_fill"></view>
+</view>
