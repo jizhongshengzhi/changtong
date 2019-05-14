@@ -150,7 +150,7 @@
       <view class="basis-df">.padding-tb-{size}</view>
     </view>
     <view class="flex flex-wrap padding solid-top">
-      <view class="basis-df padding-bottom-xs">上外边距</view>
+      <view class="basis-df padding-bottxs">上外边距</view>
       <view class="basis-df padding-bottom-xs">上内边距</view>
       <view class="basis-df">.margin-top-{size}</view>
       <view class="basis-df">.padding-top-{size}</view>

@@ -6,7 +6,9 @@
         "pages/shopping/index/index",
         "pages/community/index/index",
         "pages/personal/index/index",
-        "pages/personal/edit/edit"
+        "pages/personal/edit/edit",
+        "pages/community/index/detail",
+        "pages/community/index/chat"
     ],
     "window": {
         "backgroundTextStyle": "light",
