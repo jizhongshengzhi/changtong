@@ -24,9 +24,9 @@
       </view>
       <view class="cu-bar bg-white justify-around">
         <view class="action">
-        <button class="cu-btn line-green text-green radius" bindtap="hideModal1">否</button>
-        <button class="cu-btn bg-green margin-left radius" bindtap="hideModal1">是</button>
-      </view>
+          <button class="cu-btn line-green text-green radius" bindtap="hideModal1">否</button>
+          <button class="cu-btn bg-green margin-left radius" bindtap="hideModal1">是</button>
+        </view>
       </view>
     </view>
   </view>

@@ -24,9 +24,11 @@
         </view>
       </view>
       <view class="flex p-xs margin-bottom-sm mb-sm">
+        <navigator class="action" url="detail" hover-class="none">
         <view class="flex-sub">
-        <button class="cu-btn round xl bg-red margin-top-xs margin-left-lg">查看详情</button>
+          <button class="cu-btn round xl bg-red margin-top-xs margin-left-lg">查看详情</button>
         </view>
+        </navigator>
         <view class="flex-twice text-gray text-sm text-right padding">
         <text class="icon-attentionfill margin-lr-xs"></text> 10
         <text class="icon-appreciatefill margin-lr-xs"></text> 20
