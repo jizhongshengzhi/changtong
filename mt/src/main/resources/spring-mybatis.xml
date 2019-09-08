@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd  http://www.springframework.org/schema/context  http://www.springframework.org/schema/context/spring-context-3.2.xsd 
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd"
+	xmlns:tx="http://www.springframework.org/schema/tx" default-autowire="byName">
+
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="configLocation" value="classpath:mybatis-config.xml" />
+		<property name="mapperLocations">
+			<list>
+				<value>classpath*:com/mt/mapping/*.xml</value>
+			</list>
+		</property>
+		<property name="dataSource" ref="mysqlDataSource" />
+	</bean>
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="mysqlDataSource" />
+	</bean>
+
+	<!-- mybatis自动扫描器 -->
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="com.mt.mapper" />
+		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
+	</bean>
+
+	<bean id="druid-stat-interceptor"
+	    class="com.alibaba.druid.support.spring.stat.DruidStatInterceptor">
+	</bean>
+
+	<!-- 事物管理 -->
+	<bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="mysqlDataSource"/>
+	</bean>
+	<aop:config>
+		<aop:pointcut id="baseServiceMethods"
+			expression="execution(* com.mt.service..*.*(..))" />
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="baseServiceMethods" />
+	    <aop:advisor advice-ref="druid-stat-interceptor" pointcut-ref="baseServiceMethods" />
+	</aop:config>
+
+	<!-- 传播特性 -->
+	<tx:advice id="txAdvice" transaction-manager="txManager">
+		<tx:attributes>
+			<tx:method name="query*" propagation="REQUIRED" read-only="true" />
+			<tx:method name="get*" propagation="REQUIRED" read-only="true" />
+			<tx:method name="load*" propagation="REQUIRED" read-only="true" />
+			<tx:method name="is*" propagation="REQUIRED" read-only="true" />
+			<tx:method name="find*" propagation="REQUIRED" read-only="true" />
+			<tx:method name="list*" propagation="REQUIRED" read-only="true" />
+			<tx:method name="count*" propagation="REQUIRED" read-only="true" />
+			<tx:method name="*" propagation="REQUIRED" />
+		</tx:attributes>
+	</tx:advice>
+
+	<!-- 扫描其目录下的Dao -->
+	<context:component-scan base-package="com.mt.mapper" use-default-filters="false">
+		<context:include-filter type="annotation" expression="org.springframework.stereotype.Repository" />
+	</context:component-scan>
+	
+</beans>

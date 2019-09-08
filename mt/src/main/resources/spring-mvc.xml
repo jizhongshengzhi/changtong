@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd  http://www.springframework.org/schema/context  http://www.springframework.org/schema/context/spring-context-3.2.xsd 
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
+	http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd"
+	xmlns:tx="http://www.springframework.org/schema/tx" default-autowire="byName">
+	
+	<!-- 设置Spring需要扫描的MVC组件包 -->
+	<context:annotation-config />
+	<!-- 控制器 -->
+	<context:component-scan base-package="com.mt.controllers"
+		use-default-filters="false">
+		<context:include-filter type="annotation"
+			expression="org.springframework.stereotype.Controller" />
+		<context:include-filter type="annotation"
+			expression="org.springframework.web.bind.annotation.ControllerAdvice" />
+	</context:component-scan>
+	<!-- 指定全局的Validator -->
+	<mvc:annotation-driven /> 
+	<mvc:annotation-driven validator="validator" />
+
+	<!-- 上传限制 -->
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="-1" />
+		<property name="defaultEncoding" value="UTF-8"></property>
+	</bean>
+
+	<!-- 基于Cookie的国际化配置 -->
+	<bean id="localeResolver"
+		class="org.springframework.web.servlet.i18n.CookieLocaleResolver">
+		<property name="cookieName" value="clientlanguage" />
+		<property name="cookieMaxAge" value="-1" />
+	</bean>
+	<bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+		<property name="exceptionMappings">
+			<props>
+				<prop
+					key="org.springframework.web.bind.MissingServletRequestParameterException">
+					/error/requiredParameter
+				</prop>
+				<prop key="org.springframework.beans.TypeMismatchException">
+					/error/mismatchParameter
+				</prop>
+				<prop key="org.springframework.web.bind.ServletRequestBindingException">
+					/error/bindException
+				</prop>
+				<prop key="org.springframework.dao.DataIntegrityViolationException">
+					/error/integrityViolation
+				</prop>
+			</props>
+		</property>
+	</bean>
+	<bean
+		class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
+		<property name="webBindingInitializer">
+			<bean class="com.mt.common.mvc.BindingInitializer" />
+		</property>
+		<property name="messageConverters">
+			<util:list id="beanList">
+				<ref bean="fastJsonHttpMessageConverter" />
+				<ref bean="stringHttpMessageConverter" />
+			</util:list>
+		</property>
+	</bean>
+	<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor" />
+
+	<!-- json格式 -->
+	<bean id="fastJsonHttpMessageConverter"
+		class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter">
+		<property name="supportedMediaTypes">
+			<list>
+				<value>application/json;charset=UTF-8</value>
+				<value>application/x-www-form-urlencoded; charset=UTF-8</value>
+			</list>
+		</property>
+	</bean>
+
+	<!-- String 编码与转换 -->
+	<bean id="stringHttpMessageConverter"
+		class="org.springframework.http.converter.StringHttpMessageConverter">
+		<constructor-arg value="UTF-8" />
+		<property name="supportedMediaTypes">
+			<list>
+				<bean class="org.springframework.http.MediaType">
+					<constructor-arg index="0" value="text" />
+					<constructor-arg index="1" value="plain" />
+					<constructor-arg index="2" value="UTF-8" />
+				</bean>
+				<bean class="org.springframework.http.MediaType">
+					<constructor-arg index="0" value="*" />
+					<constructor-arg index="1" value="*" />
+					<constructor-arg index="2" value="UTF-8" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<!-- 内容协商管理器 -->
+	<!--1、首先检查路径扩展名（如my.pdf）；2、其次检查Parameter（如my?format=pdf）；3、检查Accept Header -->
+	<bean id="contentNegotiationManager"
+		class="org.springframework.web.accept.ContentNegotiationManagerFactoryBean">
+		<!-- 扩展名至mimeType的映射,即 /user.json => application/json -->
+		<property name="favorPathExtension" value="true" />
+		<!-- 用于开启 /userinfo/123?format=json 的支持 -->
+		<property name="favorParameter" value="true" />
+		<property name="parameterName" value="format" />
+		<!-- 是否忽略Accept Header -->
+		<property name="ignoreAcceptHeader" value="false" />
+
+		<property name="mediaTypes"><!--扩展名到MIME的映射；favorPathExtension, favorParameter是true时起作用 -->
+			<value>
+				json=application/json
+				xml=application/xml
+				html=text/html
+			</value>
+		</property>
+		<!-- 默认的content type -->
+		<property name="defaultContentType" value="application/json" />
+	</bean>
+
+	<!-- 控制器异常处理 -->
+	<bean id="exceptionHandlerExceptionResolver"
+		class="org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver">
+		<property name="contentNegotiationManager" ref="contentNegotiationManager" />
+		<property name="messageConverters">
+			<util:list id="beanList">
+				<ref bean="fastJsonHttpMessageConverter" />
+				<ref bean="stringHttpMessageConverter" />
+			</util:list>
+		</property>
+	</bean>
+	<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping" />
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/page/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+	<bean class="org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter" />
+	<!-- css js 等不走mvc过滤 -->
+	<mvc:resources mapping="/js/**" location="/js/" />
+	<mvc:resources mapping="/*.txt" location="/" />
+	<mvc:resources mapping="/css/**" location="/css/" />
+	<mvc:resources mapping="/images/**" location="/images/" />
+	<mvc:resources mapping="/page/**" location="/page/" />
+	<mvc:resources mapping="/resources/**" location="/resources/" />
+	<bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
+		<property name="providerClass"   value="org.hibernate.validator.HibernateValidator"/>  
+		<property name="validationMessageSource" ref="messageSource" />
+	</bean>
+</beans>
