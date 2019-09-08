@@ -21,9 +21,6 @@ public class Feces {
     private Byte smell;         // 气味
     private Byte color;         // 颜色
 
-    @ManyToOne
-    private OrdinaryUser ordinaryUser;  // 普通用户
-
     @OneToOne(mappedBy = "feces")
     private HeartRate heartRate;        // 心率
 
@@ -78,11 +75,4 @@ public class Feces {
         this.color = color;
     }
 
-    public OrdinaryUser getOrdinaryUser() {
-        return ordinaryUser;
-    }
-
-    public void setOrdinaryUser(OrdinaryUser ordinaryUser) {
-        this.ordinaryUser = ordinaryUser;
-    }
 }

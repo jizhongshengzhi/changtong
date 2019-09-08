@@ -1,6 +1,8 @@
 package com.jizhongshengzhi.changTong.entity;
 
 import javax.persistence.*;
+import java.util.Date;
+import java.util.List;
 
 /**
  * @ClassName User
@@ -10,40 +12,45 @@ import javax.persistence.*;
 @Entity
 public class User {
     private static final String defaultPassword = "123456";
+    public static final byte GENDER_MALE = 0;
+    public static final byte GENDER_FEMALE = 1;
+    public static final byte GENDER_default = 2;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(unique = true)
-    private String userName;    // 用户名
+    private String userName;                    // 用户名
 
     private String password = defaultPassword;  // 原密码
 
-    @Transient     // 不存在于数据表
-    private String newPassword;     // 新密码
+    @Transient                                  // 不存在于数据表
+    private String newPassword;                 // 新密码
 
-    @OneToOne
-    private OrdinaryUser ordinaryUser;  // 普通用户
+    private Byte gender = GENDER_default;       // 性别
 
-    public OrdinaryUser getOrdinaryUser() {
-        return ordinaryUser;
+    private Date birthday;                      // 出生日期
+
+    public Byte getGender() {
+        return gender;
     }
 
-    public void setOrdinaryUser(OrdinaryUser ordinaryUser) {
-        this.ordinaryUser = ordinaryUser;
+    public void setGender(Byte gender) {
+        this.gender = gender;
     }
 
-    public Doctor getDoctor() {
-        return doctor;
+    public Date getBirthday() {
+        return birthday;
     }
 
-    public void setDoctor(Doctor doctor) {
-        this.doctor = doctor;
+    public void setBirthday(Date birthday) {
+        this.birthday = birthday;
     }
 
-    @OneToOne
-    private Doctor doctor;  // 医生
+    @OneToMany(mappedBy = "User")
+    private List<Feces> fecesList;              // 粪便
+
 
     public Long getId() {
         return id;

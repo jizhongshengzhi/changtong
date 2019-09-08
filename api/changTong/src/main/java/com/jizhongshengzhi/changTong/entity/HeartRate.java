@@ -18,6 +18,8 @@ public class HeartRate {
 
     private Short maxHr; // 最大心率
 
+    private Short minHr; // 最小心率
+
     public Long getId() {
         return id;
     }
@@ -42,5 +44,4 @@ public class HeartRate {
         this.minHr = minHr;
     }
 
-    private Short minHr; // 最小心率
 }
