@@ -14,58 +14,18 @@
 
     <context:annotation-config />
 	<aop:aspectj-autoproxy />
-
-	<!--加载本地配置 -->
-	<context:component-scan base-package="com.mt"/>
-	<context:property-placeholder location="classpath:conf/*.properties"/>
-    <!-- <bean id="propertyConfigurer" class="com.mt.architect.placeholder.EncryptablePropertyPlaceholderConfigurer">
-		<property name="locations">
-			<list>
-				<value>classpath*:conf/*.properties</value>
-			</list>
-		</property>
-	</bean> -->
+	
 	<bean id="springContextHolder" class="com.mt.common.utils.SpringContextHolder" lazy-init="false"></bean> 
-	<bean id="stringSerializer" class="org.springframework.data.redis.serializer.StringRedisSerializer"/>	
     
-	<bean id="mysqlDataSource" class="com.alibaba.druid.pool.DruidDataSource" destroy-method="close"> 
-		<property name="url" value="${jdbc_url}"/>
-		<property name="username" value="${jdbc_username}"/>
-		<property name="password" value="${jdbc_password}"/>
-		<property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-		<!-- 最小空闲连接 -->	
-		<property name="minIdle" value="5"/>
-		<!--maxIdle: 最大空闲连接-->
-		<!--   
-        <property name="maxIdle" value="20"/>
-        -->   
-        <!--maxActive: 最大连接数量-->
-		<property name="maxActive" value="120"/>
-		<!-- 是否要进行检测 -->
-        <property name="testWhileIdle" value="true"/>
-        <property name="testOnBorrow" value="false"/>
-		<!-- 进行检测一个连接是有效的SQL语句，比如oracle是select 1 from dual 而 mysql是 select 1-->
-        <property name="validationQuery" value="select 1"/>
-        <property name="keepAlive" value="true" />
-		<!-- 是否在数据库连接请求量大的时候，如总数50，当前已请求了49个，所剩不多了，检测那些执行时间久的连接，将其从池中移除掉(移除之后怎么作，由实现决定，如直接断开，或者任其继续执行等) -->
-        <property name="removeAbandoned" value="true"/>
-        <!--removeAbandonedTimeout: 超时时间(以秒数为单位)-->    
-        <property name="removeAbandonedTimeout" value="7200"/>  
-		<!-- 每次检测时，需要检测多少个数据连接，一般设置为与最大连接数一样，这样就可以检测完所有的连接-->
-        <property name="numTestsPerEvictionRun" value="120"/>
-		<!-- 在空闲连接回收器线程运行期间休眠的时间值,以毫秒为单位. -->  
-        <property name="timeBetweenEvictionRunsMillis" value="60000"/>
-		<!-- 一个数据库连接连接多少时间之外，我们认为其应该不再适用了(可能下一次就会失效了)，应该移除并重新建立连接了 -->
-        <property name="minEvictableIdleTimeMillis" value="300000"/>
-         <!-- 打开PSCache，并且指定每个连接上PSCache的大小   --> 
-    	<property name="poolPreparedStatements" value="true" />  
-    	<property name="maxPoolPreparedStatementPerConnectionSize" value="20" />
-        <property name="filters" value="stat" />
-        <property name="proxyFilters">
-	        <list>
-	            <ref bean="wall-filter" />
-	        </list>
-	    </property>
+	<context:property-placeholder location="classpath:conf/comm.properties" />
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://localhost:3306/mt?useUnicode=true&amp;characterEncoding=UTF-8&amp;zeroDateTimeBehavior=convertToNull&amp;allowMultiQueries=true" />
+		<property name="username" value="root" />
+		<property name="password" value="123456" />
+		<property name="maxActive" value="30" />
+		<property name="maxIdle" value="5" />
 	</bean>
 
 	<!--不知道啥东西，先留着吧 -->

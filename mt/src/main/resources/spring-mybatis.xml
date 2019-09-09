@@ -15,10 +15,10 @@
 				<value>classpath*:com/mt/mapping/*.xml</value>
 			</list>
 		</property>
-		<property name="dataSource" ref="mysqlDataSource" />
+		<property name="dataSource" ref="dataSource" />
 	</bean>
 	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
-		<property name="dataSource" ref="mysqlDataSource" />
+		<property name="dataSource" ref="dataSource" />
 	</bean>
 
 	<!-- mybatis自动扫描器 -->
@@ -33,7 +33,7 @@
 
 	<!-- 事物管理 -->
 	<bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-		<property name="dataSource" ref="mysqlDataSource"/>
+		<property name="dataSource" ref="dataSource"/>
 	</bean>
 	<aop:config>
 		<aop:pointcut id="baseServiceMethods"
@@ -56,9 +56,4 @@
 		</tx:attributes>
 	</tx:advice>
 
-	<!-- 扫描其目录下的Dao -->
-	<context:component-scan base-package="com.mt.mapper" use-default-filters="false">
-		<context:include-filter type="annotation" expression="org.springframework.stereotype.Repository" />
-	</context:component-scan>
-	
 </beans>
