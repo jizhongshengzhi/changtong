@@ -16,13 +16,15 @@
 	<aop:aspectj-autoproxy />
 
 	<!--加载本地配置 -->
-    <bean id="propertyConfigurer" class="com.mt.architect.placeholder.EncryptablePropertyPlaceholderConfigurer">
+	<context:component-scan base-package="com.mt"/>
+	<context:property-placeholder location="classpath:conf/*.properties"/>
+    <!-- <bean id="propertyConfigurer" class="com.mt.architect.placeholder.EncryptablePropertyPlaceholderConfigurer">
 		<property name="locations">
 			<list>
 				<value>classpath*:conf/*.properties</value>
 			</list>
 		</property>
-	</bean>
+	</bean> -->
 	<bean id="springContextHolder" class="com.mt.common.utils.SpringContextHolder" lazy-init="false"></bean> 
 	<bean id="stringSerializer" class="org.springframework.data.redis.serializer.StringRedisSerializer"/>	
     

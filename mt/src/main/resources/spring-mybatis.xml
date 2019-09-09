@@ -23,7 +23,7 @@
 
 	<!-- mybatis自动扫描器 -->
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.mt.mapper" />
+		<property name="basePackage" value="com.mt.dao" />
 		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
 	</bean>
 
