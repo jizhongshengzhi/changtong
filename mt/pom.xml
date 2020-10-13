@@ -29,7 +29,7 @@
 		<jdbc.driver.version>5.1.35</jdbc.driver.version>
 		<quartz.version>2.2.1</quartz.version>
 		<fastjson.version>1.1.36</fastjson.version>
-		<junit.version>4.11</junit.version>
+		<junit.version>4.13.1</junit.version>
 		<validation.version>1.1.0.Final</validation.version>
 		<jsqlparser.version>0.8.6</jsqlparser.version>
 		<beanutils.version>1.8.3</beanutils.version>
