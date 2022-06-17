@@ -28,7 +28,7 @@
 		<jdbc.driver.artifactId>mysql-connector-java</jdbc.driver.artifactId>
 		<jdbc.driver.version>5.1.35</jdbc.driver.version>
 		<quartz.version>2.2.1</quartz.version>
-		<fastjson.version>1.1.36</fastjson.version>
+		<fastjson.version>1.2.83</fastjson.version>
 		<junit.version>4.11</junit.version>
 		<validation.version>1.1.0.Final</validation.version>
 		<jsqlparser.version>0.8.6</jsqlparser.version>
